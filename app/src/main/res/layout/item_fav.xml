@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.osamaelsh3rawy.graduation.data.model.Items" />
+        <variable
+            name="favInterface"
+            type="com.osamaelsh3rawy.graduation.adapter.FavAdapter.FavInterface" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_fav"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_125sdp"
+        android:backgroundTint="@color/banfsage_lite"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_10sdp"
+      >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_85sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/iphone2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:onClick="@{()-> favInterface.FavOnItemClicked(item)}"
+                app:layout_constraintTop_toTopOf="parent" />
+            // loadImage="@{() -> item.item.imageUrl}"
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.name}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(item.price)+'$'}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <Button
+                android:id="@+id/btn_disable"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:onClick="@{()->favInterface.RemoveFav(item)}"
+                android:backgroundTint="@color/banfsage"
+                android:background="@drawable/ic_disabled" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
