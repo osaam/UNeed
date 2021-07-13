@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">graduation</string>
+    <string name="forget_your_password">Forget your password ?</string>
+    <string name="already_have_account">already have account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="wellcom_back">welcom back</string>
+    <string name="create_your_account">Create your Account</string>
+    <string name="put_mail_here">Enter your Email Address And we will send you an email to reset your password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_your_password">reset your password</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="close_drawer">close drawer layout</string>
+    <string name="open_drawer">"open drawer layout"</string>
+    <string name="productname">product name</string>
+
+    <string-array name="quantaty">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10(max)</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grad_nav"
+    app:startDestination="@id/fragment_home">
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.login.FragmentLogin"
+        android:label="Login" >
+        <action
+            android:id="@+id/Login_to_SignUp"
+            app:destination="@id/fragmentSignUp" />
+        <action
+            android:id="@+id/Login_to_fragmentHome"
+            app:destination="@id/fragment_home"
+            app:popUpTo="@id/fragment_login"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/login_to_ForgetPassword"
+            app:destination="@id/fragmentForgetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUp"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.login.FragmentSignUp"
+        android:label="SignUp" >
+        <action
+            android:id="@+id/SignUp_to_Login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentHome"
+        android:label="Home" >
+        <action
+            android:id="@+id/home_to_Details"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCart"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentCart"
+        android:label="Cart" >
+        <action
+            android:id="@+id/Cart_to_payment"
+            app:destination="@id/fragment_payment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFav"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentFav"
+        android:label="Favourit" />
+    <fragment
+        android:id="@+id/fragment_support"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentSupport"
+        android:label="FragmentSupport" />
+    <fragment
+        android:id="@+id/fragment_payment"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentPayment"
+        android:label="Fragment_payment" >
+        <action
+            android:id="@+id/payment_to_Credit"
+            app:destination="@id/fragmentCredit" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentResetPassword"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.login.FragmentResetPassword"
+        android:label="FragmentResetPassword" >
+        <action
+            android:id="@+id/ResetPassword_to_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentForgetPassword"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.login.FragmentForgetPassword"
+        android:label="FragmentForgetPassword" >
+        <action
+            android:id="@+id/ForgetPassword_to_SignUp"
+            app:destination="@id/fragmentSignUp" />
+        <action
+            android:id="@+id/ForgetPassword_to_ResetPassword"
+            app:destination="@id/fragmentResetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentDetails"
+        android:label="FragmentDetails" />
+    <fragment
+        android:id="@+id/fragmentCredit"
+        android:name="com.osamaelsh3rawy.graduation.ui.fragment.home.FragmentCredit"
+        android:label="FragmentCredit" />
+</navigation>
